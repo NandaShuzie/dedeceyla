@@ -3,10 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Lope-Lope buat ceyla cayang</title>
+  <style>
+ body {
+ background: pink;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+background: red;
+position: relative;
+transform: rotate(-45deg);
+animation: beat 1s infinite}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before{
+  top: -50%;
+left: 0;
+}
+
+.heart::after {
+  top:0;
+  left: 50%;
+}
+
+@keyframes beat {
+  0%, 100% {transform: rotate(-45deg)
+    scale(1);}
+50% {transform: rotate(-45deg) scale(1.2);}
+  }
+
+  .text {
+    margin: 30px;
+    font-size: 25px;
+    color: darkred;
+    opacity: 1;
+    animation: fadein 3s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+
+
+
+</style>
 </head>
 <body>
   <div class="heart"></div>
-  <div class="text">ai lopp yuuu ceyla cayanggg ❤️</div>
+  <div class="text">ai loppp yuu ceyla cayanggg ❤️</div>
 </body>
 </html>
